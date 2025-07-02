@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+  <section class="hero-video">
+    <nav id="desktop-nav">
+      <a href="index.html">
+        <img src="./assets/logo.png" alt="Logo" class="site-logo" />
+      </a>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#education-experience">Experience</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#education-experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="projects.html" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="contact.html" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+    <video autoplay muted loop playsinline>
+      <source src="./assets/hero.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <div class="hero-overlay">
+      <h1 class="hero-title">Engineering Portfolio</h1>
+      <h1 class="hero-name">Andrew Campos</h1>
+    </div>
+  </section>
+  <section class="logo-strip">
+  <div class="logo-strip-container">
+    <img src="./assets/ColumbiaEngineering.png" alt="ColumbiaEngineering" />
+    <img src="./assets/NASA.png" alt="NASA" />
+    <img src="./assets/CUFR.png" alt="CUFR" />
+    <img src="./assets/HiPerLab.png" alt="HiPerLab" />
+    <img src="./assets/Pyka.png" alt="Pyka" />
+  </div>
+  </section>
+    <section id="about">
+      <h1 class="about-heading">About Me</h1>
+      <div class="about-main-container">
+        <div class="about-left">
+          <div class="about-card">
+            <img src="./assets/profilepic.png" alt="Andrew Campos Profile" class="about-profile-pic" />
+            <h2>Andrew Campos</h2>
+            <p class="about-sub">Mechanical Engineer | Leader | Pilot | Aerospace/Robotics Enthusiast</p>
+            <div class="about-socials">
+              <a href="https://linkedin.com/in/andrewcampos06/" target="_blank">
+                <img src="./assets/linkedin.png" class="icon" alt="LinkedIn" />
+              </a>
+              <a href="https://github.com/andrew-campos06/" target="_blank">
+                <img src="./assets/github.png" class="icon" alt="GitHub" />
+              </a>
+              <a href="https://www.instagram.com/andrew._.campos/" target="_blank">
+                <img src="./assets/instagram.png" class="icon" alt="Instagram" />
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="about-right">
+          <div class="about-text-wrapper">
+          <p>
+            I'm a Mechanical Engineering student from Palo Alto, CA, entering my sophomore year at Columbia University in New York City. My interests center on robotics, autonomous systems, and aerospace technologies—fields I've explored through both research and hands-on work. Currently, I’m interning at NASA’s Ames Research Center and contributing to the development of a custom PairTilt quadcopter in UC Berkeley’s High Performance Robotics Lab. 
+            I’ve also grown overtime through leadership—serving as class president for two years and participating in my school’s leadership program throughout high school. Whether in the classroom, on the field, or in a team environment, I value collaboration and clear communication. At heart, I’m driven by a desire to build and problem-solve. 
+            I enjoy tackling abstract challenges with creativity and precision, and I’m always looking for new ways to apply engineering to real-world problems.
+          </p>
+          <p>
+
+          <div class="btn-container about-btns">
+            <a href="./assets/AndrewCamposResume.pdf" download class="btn btn-custom">Download Resume</a>
+            <a href="contact.html" class="btn btn-custom">Contact Me</a>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+    <section id="education-experience">
+      <div class="edu-exp-container">
+        <!-- Education Column -->
+        <div class="education-column">
+          <h2>Education</h2>
+          <h3>Columbia University – New York, NY</h3>
+          <p><em>B.S. in Mechanical Engineering (Expected 2028)</em></p>
+          <ul>
+            <li> GPA: 3.84/4.00, Dean’s List</li>
+            <li>Relevant Courses: Multivariable Calculus, Data Structures, Physics Electricity & Magnetism, Physics Mechanics & Thermodynamics, Intro to CS for Engineers, General Chemistry. </li>
+            <li>Currently Taking: Advanced Programming, Linear Algebra, Ordinary Differential Equations, Intro to Classical Quantum Mechanics   </li>
+            <li>Involvement: Formula SAE Frame/Body/Aero Team, Columbia University Rugby Football Club (CURFC) </li>
+          </ul>
+
+          <h3>Los Altos High School – Los Altos, CA</h3>
+          <p><em>High School Diploma | 2020-2024</em></p>
+          <ul>
+            <li> UW GPA: 3.98/4.00 </li>
+            <li> Class President (2021-2023)
+              <ul>
+                  <li>Served as a liaison between school leadership, administration, and the 500 person Class of 2024, successfully raising over $40,000 for scholarships and events through innovative fundraising initiatives.</li>
+                  <li>Led over 30 class council meetings, fostering collaboration and driving impactful student engagement</li>
+               </ul>
+            </li>
+            <li> Associative Student Body
+              <ul>
+                  <li>Led policy discussions and organized events to shape campus decisions and foster school spirit and inclusivity.</li>
+               </ul>
+            </li>
+            <li> MVLA Service League of Boys Member</li>
+            <li> Varsity Football</li>
+            <li> Other Jobs
+              <ul>
+                  <li>Lifeguard - Fremont Hills Country Club</li>
+                  <li>Sports Camp Counselor - Decathlon Sports Club</li>
+               </ul>
+            </li>
+            <li> Awards
+              <ul>
+                  <li>Certificate of Special Congressional Recognition</li>
+                  <li>LAHS Leadership Award</li>
+                  <li>Seal of Biliteracy (Spanish & English)</li>
+                  <li>National Honors Society</li>
+                  <li>California Scholastic Federation</li>
+               </ul>
+            </li>
+          </ul>
+
+        </div>
+
+        <!-- Experience Column -->
+        <div class="experience-column">
+          <h2>Experience</h2>
+          <h3>NASA Engineering on Tensegrity Structures</h3>
+          <p><em> Internship | Summer 2025</em></p>
+          <ul>
+            <li>Developing a scalable, motor-actuated tensegrity structure based on a NASA design to explore lightweight, compliant systems for robotic mobility.</li>
+          </ul>
+
+          <h3>High Performance Robotics Research Lab (HiPerLab) – Berkeley, CA</h3>
+          <p><em>UC Berkeley Research Volunteer | Summer 2025</em></p>
+          <ul>
+            <li>Conducting research at UC Berkeley’s HiPeRLab, redesigning the PairTilt quadcopter to reduce weight and rotational inertia.</li>
+            <li>Objective is to improve agility, speed, and efficiency through mechanical optimization of the tilt-rotor system. </li>
+          </ul>
+
+          <h3>Columbia Formula SAE Racing, New York, NY</h3>
+          <p><em>Frame/Body/Aero Team Member | Oct 2024 - May 2025</em></p>
+          <ul>
+            <li>Design and optimize race car front and rear wings using CAD and computational fluid dynamics simulations in Altair to improve downforce, traction, and aerodynamic efficiency. </li>
+            <li>Assist in design and manufacturing of car full aerodynamics kit, including the nosecone and diffuser.</li>
+          </ul>
+
+          <h3>Fusion Reactor Research Project - Los Altos, CA</h3>
+          <p><em>Independent Research Project | Jan 2023 - Nov 2023</em></p>
+          <ul>
+            <li>Conducted independent research on optimizing tritium breeding in tokamak fusion reactors using Monte Carlo simulations.</li>
+            <li>Focused on improving blanket design to enhance fuel sustainability for future fusion energy systems.</li>
+            <li>Developed research paper - working on publication.</li>
+          </ul>
+
+          <h3>Creative Machines Lab – Columbia</h3>
+          <p><em>Research Co-Lead | 2025–present</em></p>
+          <ul>
+            <li>Co-Leading the design and prototyping of a detachable Segway-like powered attachment for non-electric wheelchairs.</li>
+            <li>Managing project logistics, mechanical design, CAD modeling, component assembly, and budgeting.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section id="projects">
+      <p class="section__text__p1">Browse My Recent</p>
+      <h1 class="title">Projects</h1>
+      <div class="projects-two-column">
+        <a href="project1.html" class="project-box">
+          <div class="project-image-wrapper">
+            <img src="./assets/Tensegrity.png" alt="NASA" />
+            <div class="project-title">NASA Tensegrity Research Project</div>
+          </div>
+        </a>
+        <a href="project1.html" class="project-box">
+          <div class="project-image-wrapper">
+            <img src="./assets/Reactor.png" alt="Tokamak" />
+            <div class="project-title">Fusion Research Project</div>
+          </div>
+        </a>
+        <a href="project1.html" class="project-box">
+          <div class="project-image-wrapper">
+           <img src="./assets/Quadcopter.png" alt="HiPerLab" />
+            <div class="project-title">Pairtilt Quadcopter Research Project</div>
+          </div>
+        </a>
+        <a href="project1.html" class="project-box">
+          <div class="project-image-wrapper">
+            <img src="./assets/Formula.png" alt="FSAE" />
+            <div class="project-title">Columbia FSAE Rear Wing</div>
+          </div>
+        </a>
+      </div>
+      <div class="see-more-container">
+        <a href="projects.html" class="see-more-button">See More</a>
+      </div>
+    </section>
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./assets/email.png"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p><a href="mailto:awc2161@columbia.edu">awc2161@columbia.edu</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
+          />
+          <p><a href="https://linkedin.com/in/andrewcampos06/">LinkedIn</a></p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="footer-links">
+        <a href="index.html">About</a>
+        <a href="experience.html">Experience</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <p>Copyright © 2025 Andrew Campos. All Rights Reserved.</p>
+   </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
