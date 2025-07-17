@@ -407,11 +407,14 @@ article .icon {
   background: rgb(250, 250, 250);
 }
 
-.project-img {
-  border-radius: 2rem;
-  width: 90%;
-  height: 90%;
+.project-image img {
+  width: 100%;
+  max-width: 400px; /* shrink it down */
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
+
 
 .project-title {
   margin: 1rem;
@@ -884,7 +887,7 @@ img {
   margin: 0 !important;
   padding: 0 !important;
   width: 100%;
-  height: 60vh;
+  height: 30vh;
   overflow: hidden;
   position: relative;
 }
@@ -895,6 +898,20 @@ img {
 .contacts-photo .nav-links a {
   color: white;
 }
+
+.contacts-photo {
+  height: 20vh !important;
+  overflow: hidden;
+  position: relative;
+}
+
+.header-image {
+  height: 100% !important;
+  width: 100% !important;
+  object-fit: cover !important;
+  display: block;
+}
+
 
 
 .contact-header {
@@ -1105,7 +1122,7 @@ footer p {
 }
 
 .project-image {
-  order: 2;
+  order: 1;
   flex: 1; /* Allows image container to grow */
   width: 3000px; /* Fixed width */
   height: auto; /* Auto height to maintain proportions */
@@ -1119,8 +1136,26 @@ footer p {
 }
 
 .project-info {
+  order: 2; /* Keeps the text on the left */
+  max-width: 600px;
+}
+
+.project-info-right {
   order: 1; /* Keeps the text on the left */
   max-width: 600px;
+}
+.project-image-right {
+  order: 1;
+  flex: 1; /* Allows image container to grow */
+  width: 3000px; /* Fixed width */
+  height: auto; /* Auto height to maintain proportions */
+}
+
+.project-image-right img {
+  width: 100%;
+  max-width: 600px; /* Increase max-width from 500px */
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
 
 .project-info h2 {
@@ -1337,4 +1372,9 @@ footer p {
 /* Make the section text tighter */
 .section__text__p1 {
   margin-bottom: 0.25rem !important;
+}
+
+.image-4k {
+  width: 3840px;
+  height: 2160px;
 }
