@@ -1470,7 +1470,7 @@ footer p {
 .skills-heading::after {
   content: "";
   display: block;
-  width: 1200px;        /* length of the line */
+  width: 900px;        /* length of the line */
   height: 2px;        /* thickness */
   background: #000;   /* black line */
   margin: 15px auto 40px auto; /* spacing above & below */
