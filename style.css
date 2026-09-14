@@ -1502,3 +1502,6 @@ footer p {
   /* Increase the max width to fill more of the screen */
   max-width: 1400px; 
 }
+
+
+#skills .skills-container h2 { text-decoration: underline; text-underline-offset: 0.18em; }
