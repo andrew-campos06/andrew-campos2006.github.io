@@ -747,6 +747,13 @@ footer p {
   top: 50%;
   width: 100%;
   text-align: center;
+  
+/* Underline Skills category headers */
+#skills .skills-container h2 {
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
   transform: translateY(-50%);
   z-index: 1;
   color: white;
