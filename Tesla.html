@@ -1,1 +1,116 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Tesla Internship | Andrew Campos</title><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="mediaqueries.css"></head><body><section class="projects-video"><div class="projects-header"><nav id="desktop-nav"><a href="index.html"><img src="./assets/logo.png" alt="Logo" class="site-logo"></a><div><ul class="nav-links"><li><a href="index.html#about">About</a></li><li><a href="index.html#education-experience">Experience</a></li><li><a href="projects.html">Projects</a></li><li><a href="contact.html">Contact</a></li></ul></div></nav><nav id="hamburger-nav"><div class="logo">Andrew Campos</div><div class="hamburger-menu"><div class="hamburger-icon" onclick="toggleMenu()"><span></span><span></span><span></span></div><div class="menu-links"><li><a href="index.html#about" onclick="toggleMenu()">About</a></li><li><a href="index.html#education-experience" onclick="toggleMenu()">Experience</a></li><li><a href="projects.html" onclick="toggleMenu()">Projects</a></li><li><a href="contact.html" onclick="toggleMenu()">Contact</a></li></div></div></nav><img src="./assets/tools.png" alt="Tools Image" class="projects-video-bg"><div class="hero-overlay"><h1 class="hero-name">Tesla Internship</h1></div></div></section><section class="project-feature"><div class="project-image"><img src="./assets/Inverter.png" alt="Tesla Internship"></div><div class="project-info"><h2>Tesla Internship</h2><h3 class="project-subtitle">Mechanical Design Engineering Intern | Palo Alto, CA | June - September 2026</h3><p>Contributed to Tesla’s drive inverter phase-out busbar and owned a fault-response hardware component. Progressed part design through DFMEA, material research, CAE simulations, manufacturing reviews, drawing and design packages, supplier coordination, and validation testing. Designed manufacturing and test fixtures and supported Hall sensor calibration, PCB mounting, laser welding, machining, and 3D printing.</p><a class="details-button" href="projects.html">← Back to Projects</a></div></section><footer><div class="footer-links"><a href="index.html#about">About</a><a href="index.html#education-experience">Experience</a><a href="projects.html">Projects</a><a href="contact.html">Contact</a></div><p>Copyright © 2025 Andrew Campos. All Rights Reserved.</p></footer><script src="script.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tesla Internship | Andrew Campos</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="mediaqueries.css">
+  <style>
+    .project-template { max-width: 1180px; margin: 0 auto; padding: 64px 32px 90px; }
+    .project-card { padding: 38px; border: 1px solid #dedede; border-radius: 18px; background: #fff; box-shadow: 0 8px 28px rgba(0,0,0,.08); }
+    .project-card h2 { margin: 0 0 12px; font-size: clamp(2rem, 4vw, 3.2rem); }
+    .project-summary { max-width: 800px; margin: 0 0 26px; font-size: 1.15rem; line-height: 1.65; color: #333; }
+    .project-meta { display: flex; flex-wrap: wrap; gap: 14px 28px; margin: 0 0 24px; color: #444; }
+    .project-meta strong { display: block; margin-bottom: 4px; color: #111; font-size: .82rem; text-transform: uppercase; letter-spacing: .08em; }
+    .project-tags { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0 26px; }
+    .project-tag { padding: 7px 12px; border-radius: 999px; background: #f0f0f0; font-size: .9rem; }
+    .project-links { display: flex; flex-wrap: wrap; gap: 12px; }
+    .project-links a { color: #111; font-weight: 700; text-decoration: underline; text-underline-offset: 4px; }
+    .project-body { display: grid; grid-template-columns: minmax(0, 1fr) 340px; gap: 42px; margin-top: 58px; }
+    .project-section { margin-bottom: 42px; }
+    .project-section h2 { margin-bottom: 12px; font-size: 1.7rem; }
+    .project-section p { max-width: 760px; margin: 0; color: #333; font-size: 1.05rem; line-height: 1.75; }
+    .project-visuals { display: flex; flex-direction: column; gap: 18px; }
+    .project-visuals img { width: 100%; border-radius: 12px; box-shadow: 0 5px 18px rgba(0,0,0,.14); }
+    .photo-slot { min-height: 145px; display: grid; place-items: center; padding: 20px; border: 2px dashed #bdbdbd; border-radius: 12px; color: #666; text-align: center; background: #fafafa; }
+    .photo-slot figcaption { font-size: .92rem; }
+    @media (max-width: 800px) {
+      .project-template { padding: 40px 20px 64px; }
+      .project-card { padding: 26px 22px; }
+      .project-body { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <section class="projects-video">
+    <div class="projects-header">
+      <nav id="desktop-nav">
+        <a href="index.html"><img src="./assets/logo.png" alt="Logo" class="site-logo"></a>
+        <div>
+          <ul class="nav-links">
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#education-experience">Experience</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <nav id="hamburger-nav">
+        <div class="logo">Andrew Campos</div>
+        <div class="hamburger-menu">
+          <div class="hamburger-icon" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+          <div class="menu-links">
+            <li><a href="index.html#about" onclick="toggleMenu()">About</a></li>
+            <li><a href="index.html#education-experience" onclick="toggleMenu()">Experience</a></li>
+            <li><a href="projects.html" onclick="toggleMenu()">Projects</a></li>
+            <li><a href="contact.html" onclick="toggleMenu()">Contact</a></li>
+          </div>
+        </div>
+      </nav>
+      <img src="./assets/tools.png" alt="Tools Image" class="projects-video-bg">
+      <div class="hero-overlay"><h1 class="hero-name">Tesla Internship</h1></div>
+    </div>
+  </section>
+
+  <main class="project-template">
+    <header class="project-card">
+      <h2>Tesla Internship</h2>
+      <p class="project-summary">Mechanical design and validation work on drive-inverter hardware and manufacturing fixtures.</p>
+      <div class="project-meta">
+        <div><strong>Role</strong>Mechanical Design Engineering Intern</div>
+        <div><strong>Duration</strong>June–September 2026</div>
+        <div><strong>Location</strong>Palo Alto, California</div>
+      </div>
+      <strong>Skills / Tools</strong>
+      <div class="project-tags">
+        <span class="project-tag">CAD</span><span class="project-tag">DFMEA</span><span class="project-tag">CAE</span><span class="project-tag">Machining</span><span class="project-tag">3D Printing</span><span class="project-tag">Reliability Testing</span>
+      </div>
+      <div class="project-links"><a href="projects.html">← Back to Projects</a><a href="#overview">Jump to Overview</a></div>
+    </header>
+
+    <div class="project-body">
+      <div>
+        <section class="project-section" id="overview">
+          <h2>1. Overview</h2>
+          <p><em>[Replace this placeholder with 2–3 sentences explaining the problem, why it mattered, and what you owned.]</em></p>
+        </section>
+        <section class="project-section" id="approach">
+          <h2>2. Approach</h2>
+          <p><em>[Describe the process here. Highlight 2–3 key decisions, design constraints, or challenges and how you addressed them.]</em></p>
+        </section>
+        <section class="project-section" id="results">
+          <h2>3. Results</h2>
+          <p><em>[Add measurable outcomes here: test counts, cycle time, weight, cost, reliability, schedule, or other evidence. Connect the numbers to the visual at right.]</em></p>
+        </section>
+        <section class="project-section" id="reflection">
+          <h2>4. Reflection</h2>
+          <p><em>[Write what you learned, how the work changed your engineering process, and what you would improve in a next iteration.]</em></p>
+        </section>
+      </div>
+      <aside class="project-visuals" aria-label="Project photos and visuals">
+        <img src="./assets/Inverter.png" alt="Tesla drive inverter hardware">
+        <figure class="photo-slot"><figcaption>Photo slot: CAD model or drawing</figcaption></figure>
+        <figure class="photo-slot"><figcaption>Photo slot: fixture, test setup, or prototype</figcaption></figure>
+        <figure class="photo-slot"><figcaption>Photo slot: results graphic or validation evidence</figcaption></figure>
+      </aside>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-links"><a href="index.html">About</a><a href="projects.html">Projects</a><a href="contact.html">Contact</a></div>
+    <p>Copyright © 2025 Andrew Campos. All Rights Reserved.</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
