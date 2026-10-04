@@ -7,8 +7,12 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="mediaqueries.css">
   <style>
-    html, body { max-width: 100%; overflow-x: hidden; }\n    .project-template { width: auto; max-width: 100%; min-width: 0; box-sizing: border-box; margin: 0; padding: 74px 5vw 100px; }
-    .project-intro { width: auto; max-width: 100%; min-width: 0; padding-bottom: 48px; border-bottom: 1px solid #d9d9d9; }\n    .project-intro-layout { display: flex; align-items: center; justify-content: space-between; gap: 72px; width: min(100%, 1500px); margin: 0 auto; padding: 0 2vw; box-sizing: border-box; }\n    .project-intro-copy { flex: 1 1 auto; min-width: 0; max-width: 100%; }\n    .project-logo { flex: 0 0 220px; width: 220px; height: 220px; object-fit: contain; margin-left: auto; }
+    html, body { max-width: 100%; overflow-x: hidden; }
+    .project-template { width: auto; max-width: 100%; min-width: 0; box-sizing: border-box; margin: 0; padding: 74px 5vw 100px; }
+    .project-intro { width: auto; max-width: 100%; min-width: 0; padding-bottom: 48px; border-bottom: 1px solid #d9d9d9; }
+    .project-intro-layout { display: flex; align-items: center; justify-content: space-between; gap: 72px; width: min(100%, 1500px); margin: 0 auto; padding: 0 2vw; box-sizing: border-box; }
+    .project-intro-copy { flex: 1 1 auto; min-width: 0; max-width: 100%; }
+    .project-logo { flex: 0 0 220px; width: 220px; height: 220px; object-fit: contain; margin-left: auto; }
     .project-intro h2 { margin: 0 0 16px; font-size: clamp(2.7rem, 6vw, 5.8rem); line-height: .98; letter-spacing: -.045em; }
     .project-summary { width: 100%; max-width: 980px; box-sizing: border-box; margin: 0 0 30px; font-size: clamp(1.15rem, 2vw, 1.55rem); line-height: 1.5; color: #444; }
     .project-meta { display: flex; flex-wrap: wrap; gap: 18px 52px; margin: 0 0 26px; color: #444; }
@@ -33,11 +37,15 @@
     .photo-slot figcaption { font-size: .92rem; }
     .photo-gallery figcaption { margin-top: 8px; color: #666; font-size: .9rem; }
     @media (max-width: 900px) {
-      .project-template { padding: 48px 24px 72px; }\n      .project-intro-layout { align-items: flex-start; gap: 28px; }\n      .project-logo { flex-basis: 130px; width: 130px; height: 130px; }
+      .project-template { padding: 48px 24px 72px; }
+      .project-intro-layout { align-items: flex-start; gap: 28px; }
+      .project-logo { flex-basis: 130px; width: 130px; height: 130px; }
       .photo-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     }
     @media (max-width: 560px) {
-      .project-template { padding: 38px 18px 58px; }\n      .project-intro-layout { display: block; }\n      .project-logo { display: block; width: 120px; height: 120px; margin: 28px 0 0; }
+      .project-template { padding: 38px 18px 58px; }
+      .project-intro-layout { display: block; }
+      .project-logo { display: block; width: 120px; height: 120px; margin: 28px 0 0; }
       .photo-gallery { grid-template-columns: 1fr; }
     }
   </style>
