@@ -7,8 +7,8 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="mediaqueries.css">
   <style>
-    .project-template { max-width: 1180px; margin: 0 auto; padding: 64px 32px 90px; }
-    .project-card { padding: 38px; border: 1px solid #dedede; border-radius: 18px; background: #fff; box-shadow: 0 8px 28px rgba(0,0,0,.08); }
+    .project-template { max-width: 1500px; width: 100%; box-sizing: border-box; margin: 0 auto; padding: 64px 5vw 90px; }
+    .project-card { width: 100%; box-sizing: border-box; padding: 38px; border: 1px solid #dedede; border-radius: 18px; background: #fff; box-shadow: 0 8px 28px rgba(0,0,0,.08); }
     .project-card h2 { margin: 0 0 12px; font-size: clamp(2rem, 4vw, 3.2rem); }
     .project-summary { max-width: 800px; margin: 0 0 26px; font-size: 1.15rem; line-height: 1.65; color: #333; }
     .project-meta { display: flex; flex-wrap: wrap; gap: 14px 28px; margin: 0 0 24px; color: #444; }
@@ -17,18 +17,27 @@
     .project-tag { padding: 7px 12px; border-radius: 999px; background: #f0f0f0; font-size: .9rem; }
     .project-links { display: flex; flex-wrap: wrap; gap: 12px; }
     .project-links a { color: #111; font-weight: 700; text-decoration: underline; text-underline-offset: 4px; }
-    .project-body { display: grid; grid-template-columns: minmax(0, 1fr) 340px; gap: 42px; margin-top: 58px; }
+    .project-body { display: block; width: 100%; margin-top: 58px; }
     .project-section { margin-bottom: 42px; }
     .project-section h2 { margin-bottom: 12px; font-size: 1.7rem; }
-    .project-section p { max-width: 760px; margin: 0; color: #333; font-size: 1.05rem; line-height: 1.75; }
+    .project-section p { max-width: none; margin: 0; color: #333; font-size: 1.05rem; line-height: 1.75; }
     .project-visuals { display: flex; flex-direction: column; gap: 18px; }
     .project-visuals img { width: 100%; border-radius: 12px; box-shadow: 0 5px 18px rgba(0,0,0,.14); }
     .photo-slot { min-height: 145px; display: grid; place-items: center; padding: 20px; border: 2px dashed #bdbdbd; border-radius: 12px; color: #666; text-align: center; background: #fafafa; }
     .photo-slot figcaption { font-size: .92rem; }
+    .project-gallery { margin-top: 58px; padding-top: 42px; border-top: 1px solid #dedede; }
+    .project-gallery h2 { margin-bottom: 10px; font-size: 1.9rem; }
+    .gallery-intro { margin: 0 0 24px; color: #555; line-height: 1.6; }
+    .photo-gallery { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+    .photo-gallery figure { margin: 0; }
+    .photo-gallery img, .photo-gallery .photo-slot { width: 100%; box-sizing: border-box; }
+    .photo-gallery img { display: block; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 12px; box-shadow: 0 5px 18px rgba(0,0,0,.14); }
+    .photo-gallery figcaption { margin-top: 8px; color: #666; font-size: .9rem; }
+
     @media (max-width: 800px) {
       .project-template { padding: 40px 20px 64px; }
       .project-card { padding: 26px 22px; }
-      .project-body { grid-template-columns: 1fr; }
+      .project-body { display: block; }
     }
   </style>
 </head>
@@ -80,30 +89,43 @@
     </header>
 
     <div class="project-body">
-      <div>
-        <section class="project-section" id="overview">
-          <h2>1. Overview</h2>
-          <p><em>[Replace this placeholder with 2–3 sentences explaining the problem, why it mattered, and what you owned.]</em></p>
-        </section>
-        <section class="project-section" id="approach">
-          <h2>2. Approach</h2>
-          <p><em>[Describe the process here. Highlight 2–3 key decisions, design constraints, or challenges and how you addressed them.]</em></p>
-        </section>
-        <section class="project-section" id="results">
-          <h2>3. Results</h2>
-          <p><em>[Add measurable outcomes here: test counts, cycle time, weight, cost, reliability, schedule, or other evidence. Connect the numbers to the visual at right.]</em></p>
-        </section>
-        <section class="project-section" id="reflection">
-          <h2>4. Reflection</h2>
-          <p><em>[Write what you learned, how the work changed your engineering process, and what you would improve in a next iteration.]</em></p>
-        </section>
-      </div>
-      <aside class="project-visuals" aria-label="Project photos and visuals">
-        <img src="./assets/Inverter.png" alt="Tesla drive inverter hardware">
-        <figure class="photo-slot"><figcaption>Photo slot: CAD model or drawing</figcaption></figure>
-        <figure class="photo-slot"><figcaption>Photo slot: fixture, test setup, or prototype</figcaption></figure>
-        <figure class="photo-slot"><figcaption>Photo slot: results graphic or validation evidence</figcaption></figure>
-      </aside>
+      <section class="project-section" id="overview">
+        <h2>1. Overview</h2>
+        <p><em>[Replace this placeholder with 2–3 sentences explaining the problem, why it mattered, and what you owned.]</em></p>
+      </section>
+      <section class="project-section" id="approach">
+        <h2>2. Approach</h2>
+        <p><em>[Describe the process here. Highlight 2–3 key decisions, design constraints, or challenges and how you addressed them.]</em></p>
+      </section>
+      <section class="project-section" id="results">
+        <h2>3. Results</h2>
+        <p><em>[Add measurable outcomes here: test counts, cycle time, weight, cost, reliability, schedule, or other evidence.]</em></p>
+      </section>
+
+      <section class="project-gallery" id="more-photos">
+        <h2>More Photos</h2>
+        <p class="gallery-intro"><em>[Add additional project photos, CAD screenshots, test setups, fixtures, or results graphics here.]</em></p>
+        <div class="photo-gallery">
+          <figure>
+            <img src="./assets/Inverter.png" alt="Tesla drive inverter hardware">
+            <figcaption>Drive inverter hardware</figcaption>
+          </figure>
+          <figure>
+            <div class="photo-slot"><figcaption>Photo slot: CAD model or drawing</figcaption></div>
+          </figure>
+          <figure>
+            <div class="photo-slot"><figcaption>Photo slot: fixture, test setup, or prototype</figcaption></div>
+          </figure>
+          <figure>
+            <div class="photo-slot"><figcaption>Photo slot: results graphic or validation evidence</figcaption></div>
+          </figure>
+        </div>
+      </section>
+
+      <section class="project-section" id="reflection">
+        <h2>4. Reflection</h2>
+        <p><em>[Write what you learned, how the work changed your engineering process, and what you would improve in a next iteration.]</em></p>
+      </section>
     </div>
   </main>
 
