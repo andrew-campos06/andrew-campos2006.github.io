@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="mediaqueries.css">
   <style>
     .project-template { width: 100%; box-sizing: border-box; margin: 0; padding: 74px 5vw 100px; }
-    .project-intro { width: 100%; padding-bottom: 48px; border-bottom: 1px solid #d9d9d9; }
+    .project-intro { width: 100%; padding-bottom: 48px; border-bottom: 1px solid #d9d9d9; }\n    .project-intro-layout { display: flex; align-items: center; justify-content: space-between; gap: 56px; }\n    .project-intro-copy { flex: 1; min-width: 0; }\n    .project-logo { flex: 0 0 190px; width: 190px; height: 190px; object-fit: contain; }
     .project-intro h2 { margin: 0 0 16px; font-size: clamp(2.7rem, 6vw, 5.8rem); line-height: .98; letter-spacing: -.045em; }
     .project-summary { max-width: 980px; margin: 0 0 30px; font-size: clamp(1.15rem, 2vw, 1.55rem); line-height: 1.5; color: #444; }
     .project-meta { display: flex; flex-wrap: wrap; gap: 18px 52px; margin: 0 0 26px; color: #444; }
@@ -33,11 +33,11 @@
     .photo-slot figcaption { font-size: .92rem; }
     .photo-gallery figcaption { margin-top: 8px; color: #666; font-size: .9rem; }
     @media (max-width: 900px) {
-      .project-template { padding: 48px 24px 72px; }
+      .project-template { padding: 48px 24px 72px; }\n      .project-intro-layout { align-items: flex-start; gap: 28px; }\n      .project-logo { flex-basis: 130px; width: 130px; height: 130px; }
       .photo-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     }
     @media (max-width: 560px) {
-      .project-template { padding: 38px 18px 58px; }
+      .project-template { padding: 38px 18px 58px; }\n      .project-intro-layout { display: block; }\n      .project-logo { display: block; width: 120px; height: 120px; margin: 28px 0 0; }
       .photo-gallery { grid-template-columns: 1fr; }
     }
   </style>
@@ -75,14 +75,18 @@
 
   <main class="project-template">
     <header class="project-intro">
-      <h2>Tesla Internship</h2>
-      <p class="project-summary">Mechanical design and validation work on drive-inverter hardware and manufacturing fixtures.</p>
-      <div class="project-meta">
-        <div><strong>Role</strong>Mechanical Design Engineering Intern</div>
-        <div><strong>Duration</strong>June–September 2026</div>
-        <div><strong>Location</strong>Palo Alto, California</div>
+      <div class="project-intro-layout">
+        <div class="project-intro-copy">
+          <p class="project-summary">Mechanical design and validation work on drive-inverter hardware and manufacturing fixtures.</p>
+          <div class="project-meta">
+            <div><strong>Role</strong>Mechanical Design Engineering Intern</div>
+            <div><strong>Duration</strong>June–September 2026</div>
+            <div><strong>Location</strong>Palo Alto, California</div>
+          </div>
+          <div class="project-links"><a href="projects.html">← Back to Projects</a></div>
+        </div>
+        <img class="project-logo" src="./assets/TeslaLogo.png" alt="Tesla logo">
       </div>
-      <div class="project-links"><a href="projects.html">← Back to Projects</a><a href="#overview">Jump to Overview</a></div>
     </header>
 
     <div class="project-body">
