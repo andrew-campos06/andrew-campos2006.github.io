@@ -1,1 +1,144 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Power Stroller Research Project | Andrew Campos</title><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="mediaqueries.css"></head><body><section class="projects-video"><div class="projects-header"><nav id="desktop-nav"><a href="index.html"><img src="./assets/logo.png" alt="Logo" class="site-logo"></a><div><ul class="nav-links"><li><a href="index.html#about">About</a></li><li><a href="index.html#education-experience">Experience</a></li><li><a href="projects.html">Projects</a></li><li><a href="contact.html">Contact</a></li></ul></div></nav><nav id="hamburger-nav"><div class="logo">Andrew Campos</div><div class="hamburger-menu"><div class="hamburger-icon" onclick="toggleMenu()"><span></span><span></span><span></span></div><div class="menu-links"><li><a href="index.html#about" onclick="toggleMenu()">About</a></li><li><a href="index.html#education-experience" onclick="toggleMenu()">Experience</a></li><li><a href="projects.html" onclick="toggleMenu()">Projects</a></li><li><a href="contact.html" onclick="toggleMenu()">Contact</a></li></div></div></nav><img src="./assets/tools.png" alt="Tools Image" class="projects-video-bg"><div class="hero-overlay"><h1 class="hero-name">Power Stroller Research Project</h1></div></div></section><section class="project-feature"><div class="project-image"><img src="./assets/CML.png" alt="Power Stroller Research Project"></div><div class="project-info"><h2>Power Stroller Research Project</h2><h3 class="project-subtitle">Creative Machines Lab Researcher | New York, NY | February 2025 - Present</h3><p>I’m currently co-leading the design and building of a detachable Segway-like powered tow for non-electric wheelchairs under Professor Hod Lipson in Columbia’s Creative Machines Lab. I’m helping manage our project by delegating work between research associates, budgeting project expenditures, communicating with MECE lab and Makerspace leaders for machining usage, and directly liaising with Professor Lipson. On the technical side I’m helping design CAD components and machine custom drivetrain parts, including steel axles, sprockets, and keyed interfaces with Lathe and Mill. I’ve also been fabricating the main frame by cutting, drilling, and assembling metal extrusions and polycarbonate panels. I’ve also helped install and integrate the motor, gear-shifter, battery, and controller to ensure full mechanical and electrical system functionality.</p><a class="details-button" href="projects.html">← Back to Projects</a></div></section><footer><div class="footer-links"><a href="index.html#about">About</a><a href="index.html#education-experience">Experience</a><a href="projects.html">Projects</a><a href="contact.html">Contact</a></div><p>Copyright © 2025 Andrew Campos. All Rights Reserved.</p></footer><script src="script.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Power Stroller Research Project | Andrew Campos</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="mediaqueries.css">
+  <style>
+    html, body { max-width: 100%; overflow-x: hidden; }
+    .project-template { width: auto; max-width: 100%; min-width: 0; box-sizing: border-box; margin: 0; padding: 74px 5vw 100px; }
+    .project-intro { width: auto; max-width: 100%; min-width: 0; padding-bottom: 48px; border-bottom: 1px solid #d9d9d9; }
+    .project-intro-layout { display: flex; align-items: center; justify-content: space-between; gap: 72px; width: min(100%, 1500px); margin: 0 auto; padding: 0 2vw; box-sizing: border-box; }
+    .project-intro-copy { flex: 1 1 auto; min-width: 0; max-width: 100%; }
+    .project-logo { flex: 0 0 220px; width: 220px; height: 220px; object-fit: contain; margin-left: auto; }
+    .project-intro h2 { margin: 0 0 16px; font-size: clamp(2.7rem, 6vw, 5.8rem); line-height: .98; letter-spacing: -.045em; }
+    .project-summary { width: 100%; max-width: 980px; box-sizing: border-box; margin: 0 0 30px; font-size: clamp(1.15rem, 2vw, 1.55rem); line-height: 1.5; color: #444; }
+    .project-meta { display: flex; flex-wrap: wrap; gap: 18px 52px; margin: 0 0 26px; color: #444; }
+    .project-meta strong { display: block; margin-bottom: 5px; color: #111; font-size: .78rem; text-transform: uppercase; letter-spacing: .1em; }
+    .project-links { display: flex; flex-wrap: wrap; gap: 20px; }
+    .project-links a { color: #111; font-weight: 700; text-decoration: underline; text-underline-offset: 4px; }
+    .project-body { display: block; width: auto; max-width: 100%; min-width: 0; margin-top: 58px; }
+    .project-section { display: block; width: auto; max-width: 100%; min-width: 0; box-sizing: border-box; margin-bottom: 54px; padding-bottom: 42px; border-bottom: 1px solid #e4e4e4; }
+    .project-section h2, .project-gallery h2 { margin: 0 0 16px; font-size: clamp(1.7rem, 3vw, 2.35rem); letter-spacing: -.02em; }
+    .project-section p { display: block; width: auto; max-width: 100%; min-width: 0; box-sizing: border-box; margin: 0; color: #333; font-size: clamp(1.08rem, 1.55vw, 1.35rem); line-height: 1.75; white-space: normal; overflow-wrap: anywhere; word-break: break-word; }
+    .project-skills { margin: 0 0 58px; padding: 30px 0 42px; border-bottom: 1px solid #e4e4e4; }
+    .project-skills h2 { margin: 0 0 18px; font-size: clamp(1.7rem, 3vw, 2.35rem); }
+    .project-tags { display: flex; flex-wrap: wrap; gap: 10px; }
+    .project-tag { padding: 9px 15px; border: 1px solid #cfcfcf; border-radius: 999px; background: #fafafa; font-size: .96rem; }
+    .project-gallery { width: auto; max-width: 100%; min-width: 0; margin-top: 0; padding-top: 0; }
+    .gallery-intro { margin: 0 0 26px; color: #555; font-size: 1.05rem; line-height: 1.6; }
+    .photo-gallery { display: grid; width: 100%; max-width: 100%; min-width: 0; grid-template-columns: repeat(2, minmax(0, 1fr)) !important; gap: 28px; }
+    .photo-gallery figure { min-width: 0; margin: 0; }
+    .photo-gallery img, .photo-gallery .photo-slot { display: block; width: 100%; max-width: 100%; box-sizing: border-box; }
+    .photo-gallery img { display: block; width: 100%; max-width: 100%; min-height: 260px; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 12px; box-shadow: 0 5px 18px rgba(0,0,0,.14); }
+    .photo-slot { min-height: 170px; display: grid; place-items: center; padding: 20px; border: 2px dashed #bdbdbd; border-radius: 12px; color: #666; text-align: center; background: #fafafa; }
+    .photo-slot figcaption { font-size: .92rem; }
+    .video-card { width: 100%; max-width: 100%; aspect-ratio: 16 / 9; overflow: hidden; border-radius: 12px; background: #111; box-shadow: 0 5px 18px rgba(0,0,0,.14); }
+    .video-card iframe { display: block; width: 100%; height: 100%; border: 0; }
+    .photo-gallery figcaption { margin-top: 8px; color: #666; font-size: .9rem; }
+    @media (max-width: 900px) {
+      .project-template { padding: 48px 24px 72px; }
+      .project-intro-layout { align-items: flex-start; gap: 28px; }
+      .project-logo { flex-basis: 130px; width: 130px; height: 130px; }
+      .photo-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 560px) {
+      .project-template { padding: 38px 18px 58px; }
+      .project-intro-layout { display: block; }
+      .project-logo { display: block; width: 120px; height: 120px; margin: 28px 0 0; }
+      .photo-gallery { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <section class="projects-video">
+    <div class="projects-header">
+      <nav id="desktop-nav">
+        <a href="index.html"><img src="./assets/logo.png" alt="Logo" class="site-logo"></a>
+        <div>
+          <ul class="nav-links">
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#education-experience">Experience</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <nav id="hamburger-nav">
+        <div class="logo">Andrew Campos</div>
+        <div class="hamburger-menu">
+          <div class="hamburger-icon" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+          <div class="menu-links">
+            <li><a href="index.html#about" onclick="toggleMenu()">About</a></li>
+            <li><a href="index.html#education-experience" onclick="toggleMenu()">Experience</a></li>
+            <li><a href="projects.html" onclick="toggleMenu()">Projects</a></li>
+            <li><a href="contact.html" onclick="toggleMenu()">Contact</a></li>
+          </div>
+        </div>
+      </nav>
+      <img src="./assets/PowerStroller.png" alt="Tools Image" class="projects-video-bg">
+      <div class="hero-overlay"><h1 class="hero-name">Power Stroller Research Project</h1></div>
+    </div>
+  </section>
+
+  <main class="project-template">
+    <header class="project-intro">
+      <div class="project-intro-layout">
+        <div class="project-intro-copy">
+          <p class="project-summary">Design and fabrication of a detachable powered tow system for non-electric wheelchairs.</p>
+          <div class="project-meta">
+            <div><strong>Role</strong>Researcher Co-Lead</div>
+            <div><strong>Duration</strong>February 2025 – Present</div>
+            <div><strong>Location</strong>Columbia University · New York, NY</div>
+          </div>
+          <div class="project-links"><a href="projects.html">← Back to Projects</a></div>
+        </div>
+        <img class="project-logo" src="./assets/CML.png" alt="Creative Machines Lab logo">
+      </div>
+    </header>
+
+    <div class="project-body">
+      <section class="project-section" id="overview">
+        <h2>1. Overview</h2>
+        <p>I’m currently co-leading the design and building of a detachable Segway-like powered tow for non-electric wheelchairs under Professor Hod Lipson in Columbia’s Creative Machines Lab. The project combines mechanical design, fabrication, and electromechanical integration to make everyday mobility more accessible.</p>
+      </section>
+      <section class="project-section" id="approach">
+        <h2>2. Approach</h2>
+        <p>I help manage project logistics by delegating work between research associates, budgeting expenditures, coordinating with the MECE lab and Makerspace for machining access, and liaising with Professor Lipson. On the technical side, I design CAD components and machine drivetrain parts including steel axles, sprockets, and keyed interfaces, while fabricating the frame from metal extrusions and polycarbonate panels.</p>
+      </section>
+      <section class="project-section" id="results">
+        <h2>3. Results</h2>
+        <p>I have integrated the motor, gear-shifter, battery, and controller into a functional electromechanical system and advanced the project toward a detachable powered mobility platform. The work has developed my ability to move from CAD and machining through assembly, wiring, and system-level testing.</p>
+      </section>
+                  <section class="project-section" id="reflection">
+        <h2>4. Reflection</h2>
+        <p><em>[Add what you learned about accessible design, project coordination, and the next engineering improvements.]</em></p>
+      </section>
+      <section class="project-skills" id="skills">
+        <h2>Skills &amp; Tools</h2>
+        <div class="project-tags">
+          <span class="project-tag">CAD</span><span class="project-tag">CATIA</span><span class="project-tag">DMEA</span><span class="project-tag">Mechanical Design</span><span class="project-tag">Hand Calcs</span><span class="project-tag">Materials Analysis</span><span class="project-tag">Reliability Testing</span><span class="project-tag">3D Printing</span><span class="project-tag">Machining</span><span class="project-tag">CNC Mill</span><span class="project-tag">Instron</span><span class="project-tag">Soldering</span><span class="project-tag">Communication</span>
+        </div>
+      </section>
+            <section class="project-gallery" id="more-photos">
+        <h2>More Photos</h2>
+        <p class="gallery-intro"><em>[Add project photos, CAD screenshots, drivetrain parts, frame fabrication, or integration tests here.]</em></p>
+        <div class="photo-gallery">
+          <figure><img src="./assets/PowerStroller.png" alt="Power stroller prototype"><figcaption>Power stroller prototype</figcaption></figure>
+          <figure><div class="photo-slot"><figcaption>Photo slot: CAD model or drivetrain drawing</figcaption></div></figure>
+          <figure><div class="photo-slot"><figcaption>Photo slot: frame, gearbox, or prototype</figcaption></div></figure>
+          <figure><div class="photo-slot"><figcaption>Photo slot: integration or testing evidence</figcaption></div></figure>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-links"><a href="index.html">About</a><a href="projects.html">Projects</a><a href="contact.html">Contact</a></div>
+    <p>Copyright © 2025 Andrew Campos. All Rights Reserved.</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
